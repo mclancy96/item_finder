@@ -11,26 +11,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Item Lookup</title>
   </head>
-  <body class="container">
+  <body class="container texxt-center">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="body-card">
         <div class=" shadow p-3 mb-5 bg-body rounded modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title  mx-auto">Enter Location to Check Weather</h3>
+                    <h3 class="modal-title  mx-auto">Find Item By DPCI</h3>
                 </div>
                 <div class="modal-body">
                     <form method="POST" action='/item/'>
-                        <h5 class="text-center">Enter your desired ZIP code and country</h5>
+                        <h5 class="text-center">Enter your product's DPCI below</h5>
                         <div class="mb-3 text-start">
-                            <label class="form-label" htmlFor="zipcode">Zipcode</label>
-                            <input type="text" class="form-control" id="zipcode" name="zipcode" aria-describedby="zipHelp" placeholder="98101" maxLength="5" onChange={this.onZipChange} pattern="[0-9]{5}" ></input>
-                            <div id="zipHelp" class="form-text">Five digit zipcode. If this is for a country other than the US, you will need to enter the ISO 3166 code in the country field below</div>
-                        </div>
-                        <div class="mb-3 text-start">
-                            <label class="form-label" htmlFor="country">Country</label>
-                            <input type="text" class="form-control" id="country" aria-describedby="countryHelp" placeholder="US" onChange={this.onCountryChange}></input>
-                            <div id="countryHelp" class="form-text">If you are searching for a location in the US, leave this field blank. If you would like to search outside of the US, please use <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO 3166</a> country codes for this field. Capitalize both/all letters.</div>
+                            <label class="form-label" htmlFor="dpci">DPCI</label>
+                            <input type="text" class="form-control" id="dpci" name="dpci" aria-describedby="dpciHelp" placeholder="071-08-2118" maxLength="5"  ></input>
+                            <div id="dpciHelp" class="form-text">DPCI with or without dashes</div>
                         </div>
                         <div class="d-grid gap-2">                    
                             <button type="submit" class="btn btn-success mx-auto" >Enter</button>

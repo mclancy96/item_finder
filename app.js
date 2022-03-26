@@ -13,10 +13,12 @@ app.get("/", (req,res) => {
 
 //Temporary route without API key
 app.post("/item", (req,res)=>{
-    res.render("./item")
+    res.render("./item");
 })
 
-
+app.get("/item", (req,res) => {
+	res.render("./item");
+});
 //Correct way to do it
 //app.post("/", (req,res)=>{dpci_handler.handleDPCI(req,res);})
 
