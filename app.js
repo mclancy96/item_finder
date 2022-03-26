@@ -12,7 +12,7 @@ app.get("/", (req,res) => {
 });
 
 //Temporary route without API key
-app.post("/", (req,res)=>{
+app.post("/item", (req,res)=>{
     res.render("./item")
 })
 
